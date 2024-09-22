@@ -1,0 +1,307 @@
+***********************************************************************************
+*                                                                                 *
+*  PPPPPPPPPPPP    L               U           U   M           M         A        *
+*  P           P   L               U           U   MM         MM        A A       *
+*  P           P   L               U           U   M M       M M       A   A      *
+*  P           P   L               U           U   M  M     M  M      A     A     *
+*  P           P   L               U           U   M   M   M   M     A       A    *
+*  PPPPPPPPPPPP    L               U           U   M    M M    M    A         A   *
+*  P               L               U           U   M     M     M   AAAAAAAAAAAAA  *
+*  P               L               U           U   M           M   A           A  *
+*  P               L               U           U   M           M   A           A  *
+*  P               LLLLLLLLLLLLL    UUUUUUUUUUU    M           M   A           A  *
+*                                                                                 *
+*            [Plu]gin-based [M]icrobiome [A]nalysis (formerly MiAMi)              *
+* (C) 2016, 2018 Bioinformatics Research Group, Florida International University  *
+*    Under MIT License From Open Source Initiative (OSI), All Rights Reserved.    *
+*                                                                                 *
+*    Any professionally published work using PluMA should cite the following:     *
+*                        T. Cickovski and G. Narasimhan.                          *
+*                Constructing Lightweight and Flexible Pipelines                  *
+*                 Using Plugin-Based Microbiome Analysis (PluMA)                  *
+*                     Bioinformatics 34(17):2881-2888, 2018                       *
+*                                                                                 *
+***********************************************************************************
+[PluMA] Running Plugin: MLEG
+
+  Bayesian network parameters
+
+  Parameters of node ambient_t_0 (Gaussian distribution)
+
+Conditional density: ambient_t_0 | i_q_t_0 + stator_yoke_t_0 + ambient_t_1 + motor_speed_t_2
+Coefficients:
+    (Intercept)          i_q_t_0  stator_yoke_t_0      ambient_t_1
+    0.006185015      0.002192798      0.008820093      0.874094208
+motor_speed_t_2
+    0.004293034
+Standard deviation of the residuals: 0.01943425
+
+  Parameters of node coolant_t_0 (Gaussian distribution)
+
+Conditional density: coolant_t_0 | coolant_t_1 + coolant_t_2
+Coefficients:
+  (Intercept)    coolant_t_1    coolant_t_2
+ 0.0003830382   1.3197721706  -0.3194154103
+Standard deviation of the residuals: 0.003542918
+
+  Parameters of node u_d_t_0 (Gaussian distribution)
+
+Conditional density: u_d_t_0 | u_d_t_1 + u_d_t_2
+Coefficients:
+ (Intercept)       u_d_t_1       u_d_t_2
+ 0.001364518   1.873336924  -0.876966039
+Standard deviation of the residuals: 0.02535258
+
+  Parameters of node u_q_t_0 (Gaussian distribution)
+
+Conditional density: u_q_t_0 | u_q_t_1 + u_q_t_2
+Coefficients:
+ (Intercept)       u_q_t_1       u_q_t_2
+-0.002512798   1.839200385  -0.844129758
+Standard deviation of the residuals: 0.0377651
+
+  Parameters of node motor_speed_t_0 (Gaussian distribution)
+
+Conditional density: motor_speed_t_0 | u_q_t_0 + i_d_t_0 + stator_winding_t_0 + motor_speed_t_1 + motor_speed_t_2
+Coefficients:
+       (Intercept)             u_q_t_0             i_d_t_0  stator_winding_t_0
+     -0.0005529294        0.0050283258       -0.0054990214       -0.0007208258
+   motor_speed_t_1     motor_speed_t_2
+      1.9015997896       -0.9120574073
+Standard deviation of the residuals: 0.01087055
+
+  Parameters of node i_d_t_0 (Gaussian distribution)
+
+Conditional density: i_d_t_0 | stator_winding_t_0 + i_d_t_1 + i_d_t_2
+Coefficients:
+       (Intercept)  stator_winding_t_0             i_d_t_1             i_d_t_2
+       0.003495307        -0.010386447         1.845237561        -0.853121315
+Standard deviation of the residuals: 0.03526077
+
+  Parameters of node i_q_t_0 (Gaussian distribution)
+
+Conditional density: i_q_t_0 | u_d_t_0 + i_q_t_1 + i_q_t_2
+Coefficients:
+ (Intercept)       u_d_t_0       i_q_t_1       i_q_t_2
+-0.001057877  -0.002575793   1.871849326  -0.877304808
+Standard deviation of the residuals: 0.02138833
+
+  Parameters of node pm_t_0 (Gaussian distribution)
+
+Conditional density: pm_t_0 | coolant_t_0 + stator_yoke_t_0 + stator_winding_t_0 + motor_speed_t_1 + pm_t_1 + pm_t_2
+Coefficients:
+       (Intercept)         coolant_t_0     stator_yoke_t_0  stator_winding_t_0
+      0.0031798325       -0.0012338490       -0.0026457151        0.0042798964
+   motor_speed_t_1              pm_t_1              pm_t_2
+      0.0005521875        1.0867225826       -0.1136809494
+Standard deviation of the residuals: 0.005147472
+
+  Parameters of node stator_yoke_t_0 (Gaussian distribution)
+
+Conditional density: stator_yoke_t_0 | coolant_t_0 + stator_tooth_t_0 + stator_yoke_t_1 + stator_yoke_t_2
+Coefficients:
+     (Intercept)       coolant_t_0  stator_tooth_t_0   stator_yoke_t_1
+   -9.077461e-05      1.746639e-03      2.815081e-03      1.724639e+00
+ stator_yoke_t_2
+   -7.285477e-01
+Standard deviation of the residuals: 0.0009624629
+
+  Parameters of node stator_tooth_t_0 (Gaussian distribution)
+
+Conditional density: stator_tooth_t_0 | u_q_t_0 + stator_tooth_t_1 + ambient_t_2 + stator_tooth_t_2
+Coefficients:
+     (Intercept)           u_q_t_0  stator_tooth_t_1       ambient_t_2
+   -0.0001642545     -0.0001142606      1.7954449783      0.0026620787
+stator_tooth_t_2
+   -0.7954367393
+Standard deviation of the residuals: 0.001126934
+
+  Parameters of node stator_winding_t_0 (Gaussian distribution)
+
+Conditional density: stator_winding_t_0 | stator_yoke_t_0 + stator_tooth_t_0 + stator_winding_t_1 + i_d_t_2 + stator_winding_t_2
+Coefficients:
+       (Intercept)     stator_yoke_t_0    stator_tooth_t_0  stator_winding_t_1
+     -1.487716e-05        1.013963e-03       -4.785288e-04        1.736355e+00
+           i_d_t_2  stator_winding_t_2
+     -7.092758e-04       -7.371263e-01
+Standard deviation of the residuals: 0.001517087
+
+  Parameters of node ambient_t_1 (Gaussian distribution)
+
+Conditional density: ambient_t_1 | i_q_t_1 + stator_yoke_t_1 + ambient_t_2
+Coefficients:
+    (Intercept)          i_q_t_1  stator_yoke_t_1      ambient_t_2
+    0.003575132      0.001427363      0.003942636      0.910930949
+Standard deviation of the residuals: 0.01963842
+
+  Parameters of node coolant_t_1 (Gaussian distribution)
+
+Conditional density: coolant_t_1 | coolant_t_2
+Coefficients:
+ (Intercept)   coolant_t_2
+0.0005559435  1.0005361783
+Standard deviation of the residuals: 0.003737362
+
+  Parameters of node u_d_t_1 (Gaussian distribution)
+
+Conditional density: u_d_t_1 | u_d_t_2
+Coefficients:
+ (Intercept)       u_d_t_2
+0.0004561966  0.9979127937
+Standard deviation of the residuals: 0.05284688
+
+  Parameters of node u_q_t_1 (Gaussian distribution)
+
+Conditional density: u_q_t_1 | u_q_t_2
+Coefficients:
+ (Intercept)       u_q_t_2
+-0.001773835   0.997451738
+Standard deviation of the residuals: 0.07040524
+
+  Parameters of node motor_speed_t_1 (Gaussian distribution)
+
+Conditional density: motor_speed_t_1 | u_q_t_1 + i_d_t_1 + stator_winding_t_1 + motor_speed_t_2
+Coefficients:
+       (Intercept)             u_q_t_1             i_d_t_1  stator_winding_t_1
+       0.001732471         0.020801081        -0.021813086        -0.016643637
+   motor_speed_t_2
+       0.965684658
+Standard deviation of the residuals: 0.02720653
+
+  Parameters of node i_d_t_1 (Gaussian distribution)
+
+Conditional density: i_d_t_1 | stator_winding_t_1 + i_d_t_2
+Coefficients:
+       (Intercept)  stator_winding_t_1             i_d_t_2
+      0.0009474662        0.0048099564        0.9983866199
+Standard deviation of the residuals: 0.06712006
+
+  Parameters of node i_q_t_1 (Gaussian distribution)
+
+Conditional density: i_q_t_1 | u_d_t_1 + i_q_t_2
+Coefficients:
+  (Intercept)        u_d_t_1        i_q_t_2
+ 7.375714e-06  -1.118651e-02   9.872842e-01
+Standard deviation of the residuals: 0.04504002
+
+  Parameters of node pm_t_1 (Gaussian distribution)
+
+Conditional density: pm_t_1 | coolant_t_1 + stator_yoke_t_1 + stator_winding_t_1 + pm_t_2
+Coefficients:
+       (Intercept)         coolant_t_1     stator_yoke_t_1  stator_winding_t_1
+       0.002622600        -0.001165806        -0.002463238         0.004449276
+            pm_t_2
+       0.976314709
+Standard deviation of the residuals: 0.005190333
+
+  Parameters of node stator_yoke_t_1 (Gaussian distribution)
+
+Conditional density: stator_yoke_t_1 | coolant_t_1 + stator_tooth_t_1 + stator_yoke_t_2
+Coefficients:
+     (Intercept)       coolant_t_1  stator_tooth_t_1   stator_yoke_t_2
+   -0.0002927822      0.0053332801      0.0081692890      0.9885000736
+Standard deviation of the residuals: 0.001421865
+
+  Parameters of node stator_tooth_t_1 (Gaussian distribution)
+
+Conditional density: stator_tooth_t_1 | u_q_t_1 + stator_tooth_t_2
+Coefficients:
+     (Intercept)           u_q_t_1  stator_tooth_t_2
+   -0.0002868842     -0.0004566512      1.0012530619
+Standard deviation of the residuals: 0.001947752
+
+  Parameters of node stator_winding_t_1 (Gaussian distribution)
+
+Conditional density: stator_winding_t_1 | stator_yoke_t_1 + stator_tooth_t_1 + stator_winding_t_2
+Coefficients:
+       (Intercept)     stator_yoke_t_1    stator_tooth_t_1  stator_winding_t_2
+     -0.0007302276        0.0086563075       -0.0176632124        1.0105140826
+Standard deviation of the residuals: 0.002757699
+
+  Parameters of node ambient_t_2 (Gaussian distribution)
+
+Conditional density: ambient_t_2 | i_q_t_2 + stator_yoke_t_2
+Coefficients:
+    (Intercept)          i_q_t_2  stator_yoke_t_2
+     0.04050177       0.01809426       0.04343688
+Standard deviation of the residuals: 0.04761237
+
+  Parameters of node coolant_t_2 (Gaussian distribution)
+
+Conditional density: coolant_t_2
+Coefficients:
+(Intercept)
+  0.6898741
+Standard deviation of the residuals: 0.8490548
+
+  Parameters of node u_d_t_2 (Gaussian distribution)
+
+Conditional density: u_d_t_2
+Coefficients:
+(Intercept)
+  0.3795956
+Standard deviation of the residuals: 0.8490998
+
+  Parameters of node u_q_t_2 (Gaussian distribution)
+
+Conditional density: u_q_t_2
+Coefficients:
+(Intercept)
+ -0.4910087
+Standard deviation of the residuals: 0.9615188
+
+  Parameters of node motor_speed_t_2 (Gaussian distribution)
+
+Conditional density: motor_speed_t_2 | u_q_t_2 + i_d_t_2 + stator_winding_t_2
+Coefficients:
+       (Intercept)             u_q_t_2             i_d_t_2  stator_winding_t_2
+        0.01554771          0.57141318         -0.57538672         -0.27508101
+Standard deviation of the residuals: 0.1519724
+
+  Parameters of node i_d_t_2 (Gaussian distribution)
+
+Conditional density: i_d_t_2 | stator_winding_t_2
+Coefficients:
+       (Intercept)  stator_winding_t_2
+         0.4435605          -1.4029696
+Standard deviation of the residuals: 0.7168054
+
+  Parameters of node i_q_t_2 (Gaussian distribution)
+
+Conditional density: i_q_t_2 | u_d_t_2
+Coefficients:
+(Intercept)      u_d_t_2
+-0.05856843  -0.83808692
+Standard deviation of the residuals: 0.3566945
+
+  Parameters of node pm_t_2 (Gaussian distribution)
+
+Conditional density: pm_t_2 | coolant_t_2 + stator_yoke_t_2 + stator_winding_t_2
+Coefficients:
+       (Intercept)         coolant_t_2     stator_yoke_t_2  stator_winding_t_2
+        0.11793219         -0.07082796         -0.07000574          0.14605615
+Standard deviation of the residuals: 0.02540184
+
+  Parameters of node stator_yoke_t_2 (Gaussian distribution)
+
+Conditional density: stator_yoke_t_2 | coolant_t_2 + stator_tooth_t_2
+Coefficients:
+     (Intercept)       coolant_t_2  stator_tooth_t_2
+     -0.01604134        0.38035934        0.76693745
+Standard deviation of the residuals: 0.04185963
+
+  Parameters of node stator_tooth_t_2 (Gaussian distribution)
+
+Conditional density: stator_tooth_t_2 | u_q_t_2
+Coefficients:
+(Intercept)      u_q_t_2
+  0.1909782    0.1029925
+Standard deviation of the residuals: 0.2412012
+
+  Parameters of node stator_winding_t_2 (Gaussian distribution)
+
+Conditional density: stator_winding_t_2 | stator_yoke_t_2 + stator_tooth_t_2
+Coefficients:
+     (Intercept)   stator_yoke_t_2  stator_tooth_t_2
+    -0.001033508      -0.627526956       1.592612237
+Standard deviation of the residuals: 0.07109493

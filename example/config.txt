@@ -1,0 +1,2 @@
+Prefix plugins/MLEG/example/
+Plugin MLEG inputfile parameters.txt outputfile none motor.csv
